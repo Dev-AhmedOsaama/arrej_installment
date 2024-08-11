@@ -1,0 +1,314 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:\u0646\u0638\u0627\u0645 \u0642\u0633\u0637-{####}",
+ "creation": "2023-03-15 19:47:51.670354",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "installment_summery_section",
+  "installment_contract",
+  "company",
+  "customer",
+  "customer_id",
+  "customer_contact",
+  "column_break_6",
+  "first_sponsor",
+  "first_sponsor_contact",
+  "first_sponsor_id",
+  "column_break_10",
+  "second_sponsor",
+  "second_sponsor_contact",
+  "second_sponsor_id",
+  "section_break_15",
+  "contract_type",
+  "installments_items",
+  "section_break_7",
+  "item",
+  "dues_period",
+  "total_amount",
+  "total_number_of_installments",
+  "original_installment_percentage",
+  "profits_installment_percentage",
+  "column_break_12",
+  "contract__date",
+  "make_first_dues_on",
+  "downpayment",
+  "installment_amount",
+  "last_installment",
+  "currency",
+  "amended_from",
+  "installment_schedule_section",
+  "installment_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "installment_summery_section",
+   "fieldtype": "Section Break",
+   "label": "installment Summery"
+  },
+  {
+   "fieldname": "installment_contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "installment Contract",
+   "options": "installment Contract",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "installment_contract.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.make_first_dues_on",
+   "fieldname": "make_first_dues_on",
+   "fieldtype": "Date",
+   "label": "Make first Dues on",
+   "options": "Make first Dues on",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "installment_contract.item",
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.dues_period",
+   "fieldname": "dues_period",
+   "fieldtype": "Select",
+   "label": "Dues Period",
+   "options": "Monthly\nYearly",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.total_amount",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.total_number_of_installments",
+   "fieldname": "total_number_of_installments",
+   "fieldtype": "Int",
+   "label": "Total number of installments",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "installment_contract.downpayment",
+   "fieldname": "downpayment",
+   "fieldtype": "Currency",
+   "label": "Downpayment",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.installment_amount",
+   "fieldname": "installment_amount",
+   "fieldtype": "Currency",
+   "label": "installment amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.last_installment",
+   "fieldname": "last_installment",
+   "fieldtype": "Currency",
+   "label": "last installment",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "installments",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "installment_schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Installment Schedule"
+  },
+  {
+   "fieldname": "installment_item",
+   "fieldtype": "Table",
+   "label": "installment Item",
+   "options": "installment Item"
+  },
+  {
+   "fetch_from": "installment_contract.customer_id",
+   "fetch_if_empty": 1,
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.customer_contact",
+   "fetch_if_empty": 1,
+   "fieldname": "customer_contact",
+   "fieldtype": "Data",
+   "label": "Customer Contact",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "installment_contract.first_sponsor",
+   "fetch_if_empty": 1,
+   "fieldname": "first_sponsor",
+   "fieldtype": "Data",
+   "label": "First Sponsor",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.first_sponsor_contact",
+   "fetch_if_empty": 1,
+   "fieldname": "first_sponsor_contact",
+   "fieldtype": "Data",
+   "label": "First Sponsor Contact",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.first_sponsor_id",
+   "fetch_if_empty": 1,
+   "fieldname": "first_sponsor_id",
+   "fieldtype": "Data",
+   "label": "First Sponsor ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "installment_contract.second_sponsor",
+   "fetch_if_empty": 1,
+   "fieldname": "second_sponsor",
+   "fieldtype": "Data",
+   "label": "Second Sponsor",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.second_sponsor_contact",
+   "fetch_if_empty": 1,
+   "fieldname": "second_sponsor_contact",
+   "fieldtype": "Data",
+   "label": "Second Sponsor Contact",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.second_sponsor_id",
+   "fetch_if_empty": 1,
+   "fieldname": "second_sponsor_id",
+   "fieldtype": "Data",
+   "label": "Second Sponsor ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.contract__date",
+   "fieldname": "contract__date",
+   "fieldtype": "Date",
+   "label": "Contract  Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.original_installment_percentage",
+   "fieldname": "original_installment_percentage",
+   "fieldtype": "Percent",
+   "label": "original installment percentage",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "installment_contract.profits_installment_percentage",
+   "fieldname": "profits_installment_percentage",
+   "fieldtype": "Percent",
+   "label": "profits installment percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "\n\u062a\u0645\u0648\u064a\u0644\u064a\n\u062a\u0642\u0633\u064a\u0637"
+  },
+  {
+   "fieldname": "installments_items",
+   "fieldtype": "Table",
+   "label": "Installments Items",
+   "options": "Installments Items"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "installments",
+   "link_doctype": "installment Payments",
+   "link_fieldname": "installments"
+  }
+ ],
+ "modified": "2024-01-30 16:52:52.522119",
+ "modified_by": "Administrator",
+ "module": "Installment",
+ "name": "installments",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

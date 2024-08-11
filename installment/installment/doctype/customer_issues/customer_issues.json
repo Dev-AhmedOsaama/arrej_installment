@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-05-05 16:16:26.640936",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "isseu_date",
+  "naming_series",
+  "customer",
+  "item",
+  "other_services",
+  "amount",
+  "column_break_4",
+  "issue",
+  "contract_invoice",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "isseu_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Isseu Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issue",
+   "fieldtype": "Text",
+   "label": "\u0648\u0635\u0641"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Issues",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CI-.YYYY.-"
+  },
+  {
+   "default": "\u062e\u062f\u0645\u0627\u062a \u0627\u062e\u0631\u064a",
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u062e\u062f\u0645\u0629",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "\u0627\u0644\u0642\u064a\u0645\u0629",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contract_invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "other_services",
+   "fieldtype": "Link",
+   "label": "\u062e\u062f\u0645\u0627\u062a \u0627\u062e\u0631\u0649",
+   "options": "Other Services",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-15 01:05:40.916533",
+ "modified_by": "Administrator",
+ "module": "Installment",
+ "name": "Customer Issues",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
